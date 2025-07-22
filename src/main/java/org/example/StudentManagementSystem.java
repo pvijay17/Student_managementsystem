@@ -35,4 +35,19 @@ Student s1=new Student(1 , "vijay" , "MCA");
 s1.display();
 
     }
+    public static void addStudent() {
+        System.out.print("Enter Roll No: ");
+        int roll = scanner.nextInt();
+        scanner.nextLine(); // clear buffer
+
+        System.out.print("Enter Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter Course: ");
+        String course = scanner.nextLine();
+
+        Student s = new Student(roll, name, course);
+        studentMap.put(roll, s);
+        System.out.println("✅ Student added successfully.");
+    }
 }
